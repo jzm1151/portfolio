@@ -2,3 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+
+@font-face {
+    font-family: 'Itim';
+    src: url("/Itim-Regular.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: 'SourceCodePro-VariableFont_wght';
+    src: url("/SourceCodePro-VariableFont_wght.ttf") format('truetype');
+}
+
+@layer base {
+    html {
+        font-family: 'SourceCodePro-VariableFont_wght', sans-serif;
+    }
+}  
+
