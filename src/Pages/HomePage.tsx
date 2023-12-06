@@ -1,6 +1,6 @@
 import HeaderNav from '../Components/Header/HeaderNav'
 
-function Home() {
+function HomePage() {
 
   return (
     <>
@@ -9,4 +9,4 @@ function Home() {
   )
 }
 
-export default Home
+export default HomePage
