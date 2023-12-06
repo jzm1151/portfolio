@@ -20,9 +20,8 @@ function HeaderNav() {
     })
 
     return (
-        <div className="relative">
-            <div className='bg-gray-blue-400 w-full h-20 absolute'></div>
-            <div className='w-full h-20 flex items-center justify-between p-5 md:p-10 z-100 relative'>
+        <div>
+            <div className='bg-gray-blue-400 w-full h-20 flex items-center justify-between p-5 md:p-10 z-100 relative'>
                 <div className='flex-grow text-gray-blue-950 text-2xl md:text-4xl font-bold'>
                     Jacob Moore
                 </div>
@@ -44,7 +43,7 @@ function HeaderNav() {
                     </svg>
                 </div>
             </div>
-            <div className={`absolute top-0 w-full h-screen bg-gray-blue-950/[.7] flex justify-end transition-all duration-200 ${showMenu ? '' : 'translate-x-[100vw]'}`}>
+            <div className={`absolute top-0 w-full h-screen bg-gray-blue-950/[.7] flex justify-end transition-all duration-200 ${showMenu ? '' : 'translate-x-[100%]'}`}>
                 <div className="bg-gray-blue-400 flex flex-col items-center justify-center h-screen w-full max-w-md relative">
                     <MobileNoBorderBtn onClick={closeMenu} link='#about' text='About' />
                     <MobileNoBorderBtn onClick={closeMenu} link='#projects' text='Projects' />
