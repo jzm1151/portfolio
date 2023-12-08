@@ -43,7 +43,7 @@ function HeaderNav() {
                     </svg>
                 </div>
             </div>
-            <div className={`absolute top-0 w-full h-screen backdrop-blur-sm backdrop-brightness-50 flex justify-end transition-all duration-200 ${showMenu ? '' : 'translate-x-[100%]'}`}>
+            <div className={`absolute top-0 z-[999] w-full h-screen backdrop-blur-sm backdrop-brightness-50 flex justify-end transition-all duration-200 ${showMenu ? '' : 'translate-x-[100%]'}`}>
                 <div className="bg-gray-blue-400 flex flex-col items-center justify-center h-screen w-full max-w-md relative">
                     <MobileNoBorderBtn onClick={closeMenu} link='#about' text='About' />
                     <MobileNoBorderBtn onClick={closeMenu} link='#projects' text='Projects' />
