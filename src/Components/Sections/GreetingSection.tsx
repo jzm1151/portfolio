@@ -1,4 +1,4 @@
-import MdBorderBtn from "../../UI/Buttons/MdBorderBtn"
+import MdBorderBtn from '../../UI/Buttons/MdBorderBtn'
 
 function GreetingSection(props: {position?: string}) {
     const dateUser = new Date()
