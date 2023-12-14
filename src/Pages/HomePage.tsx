@@ -1,6 +1,7 @@
 import HeaderNav from '../Components/Header/HeaderNav'
 import GreetingSection from '../Components/Sections/GreetingSection'
 import AboutSection from '../Components/Sections/AboutSection'
+import ProjectsSection from '../Components/Sections/ProjectsSection/ProjectsSection'
 
 function HomePage() {
 
@@ -12,6 +13,7 @@ function HomePage() {
           <GreetingSection position='col-span-2'/>
         </section>
         <AboutSection />
+        <ProjectsSection />
       </main>
     </>
   )
