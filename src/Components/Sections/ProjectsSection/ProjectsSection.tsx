@@ -14,22 +14,25 @@ function ProjectsSection() {
                 <div className='grid grid-cols-2 ml-5 mr-5 my-24 gap-10 md:grid-cols-2 md:mx-auto md:my-12 md:w-11/12 lg:w-9/12 xl:w-8/12'>
                     <div className="col-span-2 md:col-span-1 mx-auto cube-container">
                         <div className={'cube ' + cubePos}>
-                            <div className="text-gray-blue-200 backdrop-blur-sm w-full h-[2rem] cube-face-image image-1">Testing</div> 
-                            <img className="cube-face-image image-2" src="https://images.unsplash.com/photo-1515260268569-9271009adfdb?w=300&h=300&fit=crop" />
-                            <img className="cube-face-image image-3" src="https://images.unsplash.com/photo-1506045412240-22980140a405?w=300&h=300&fit=crop" />
-                            <img className="cube-face-image image-4" src="https://images.unsplash.com/photo-1514041181368-bca62cceffcd?w=300&h=300&fit=crop" />
-                            <img className="cube-face-image image-5" src="https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?w=300&h=300&fit=crop" />
-                            <img className="cube-face-image image-6" src="https://images.unsplash.com/photo-1486334803289-1623f249dd1e?w=300&h=300&fit=crop" />
+                            <div className="cube-face-image image-1 h-full w-full">
+                                <div className='h-full w-full relative'>
+                                    <img className="object-cover h-full w-full absolute top-0" src="codeflower.png" alt="How to code website screenshot" />
+                                    <div className='absolute bottom-0 w-full h-1/5 z-10 flex justify-center items-center text-gray-blue-950 font-bold backdrop-blur-2xl'>
+                                       <div>CodeFlower</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <img className="cube-face-image image-2 object-cover h-full w-full" src="vue-2048.png" alt="Vue 2048 project screenshot" />
+                            <div className="cube-face-image image-3 backdrop-blur-xl h-full w-full"></div>
+                            <div className="cube-face-image image-4 backdrop-blur-xl h-full w-full"></div>
+                            <div className="cube-face-image image-5 backdrop-blur-xl h-full w-full"></div>
+                            <div className="cube-face-image image-6 backdrop-blur-xl h-full w-full"></div>
                         </div>
                     </div>
 
                     <div className="col-span-2 md:col-span-1 image-buttons">
-                        <input type="image" className="show-image-1" onClick={rotateCube} src="https://images.unsplash.com/photo-1445810694374-0a94739e4a03?w=100&h=100&fit=crop"></input>
-                        <input type="image" className="show-image-2" onClick={rotateCube} src="https://images.unsplash.com/photo-1515260268569-9271009adfdb?w=100&h=100&fit=crop"></input>
-                        <input type="image" className="show-image-3" onClick={rotateCube} src="https://images.unsplash.com/photo-1506045412240-22980140a405?w=100&h=100&fit=crop"></input>
-                        <input type="image" className="show-image-4" onClick={rotateCube} src="https://images.unsplash.com/photo-1514041181368-bca62cceffcd?w=100&h=100&fit=crop"></input>
-                        <input type="image" className="show-image-5" onClick={rotateCube} src="https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?w=100&h=100&fit=crop"></input>
-                        <input type="image" className="show-image-6" onClick={rotateCube} src="https://images.unsplash.com/photo-1486334803289-1623f249dd1e?w=100&h=100&fit=crop"></input>
+                        <input type="image" className="show-image-1 object-cover w-32 h-32" onClick={rotateCube} src="codeflower.png"></input>
+                        <input type="image" className="show-image-2 object-cover w-32 h-32" onClick={rotateCube} src="vue-2048.png"></input>
                     </div>
                 </div>
             </div>
