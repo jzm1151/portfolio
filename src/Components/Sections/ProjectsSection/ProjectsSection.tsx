@@ -1,12 +1,23 @@
 import { useState } from 'react'
 import './ProjectsSection.css'
+import { FaGithub } from "react-icons/fa";
 
-function ProjectsSection() {
+interface ProjectsSectionProps {
+    projectsArr: {
+        title: string,
+        img: string,
+        githubHref: string,
+    }[]
+}
+
+function ProjectsSection(props: ProjectsSectionProps) {
     const [cubePos, setCubePos] = useState('initial-position')
 
     const rotateCube = (event:any) => {
         setCubePos(event.target.classList[0])
     }
+
+    console.log(props.projectsArr)
 
     return (
         <div>
@@ -17,8 +28,13 @@ function ProjectsSection() {
                             <div className="cube-face-image image-1 h-full w-full">
                                 <div className='h-full w-full relative'>
                                     <img className="object-cover h-full w-full absolute top-0" src="codeflower.png" alt="How to code website screenshot" />
-                                    <div className='absolute bottom-0 w-full h-1/5 z-10 flex justify-center items-center text-gray-blue-950 font-bold backdrop-blur-2xl'>
-                                       <div>CodeFlower</div>
+                                    <div className='absolute bottom-0 w-full h-1/5 z-10 flex justify-center items-center text-gray-blue-950 font-bold text-2xl backdrop-blur-2xl'>
+                                        <a className="flex justify-center items-center gap-2" href='https://github.com/jzm1151/Code-Flower' target='_blank'>
+                                            <div>CodeFlower</div>
+                                            <div className='text-gray-blue-100'>
+                                                <FaGithub />
+                                            </div>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -38,6 +54,16 @@ function ProjectsSection() {
             </div>
         </div>
     )
+}
+
+ProjectsSection.defaultProps = {
+    projectsArr: [
+        {
+            title: 'CodeFlower',
+            img: 'codeflower.png',
+            githubHref: 'https://github.com/jzm1151/Code-Flower',
+        },
+    ],
 }
 
 export default ProjectsSection
