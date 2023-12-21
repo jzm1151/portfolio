@@ -1,13 +1,12 @@
 import { useState } from 'react'
 import './ProjectsSection.css'
-import { FaGithub } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa"
+import { FaArrowDown } from 'react-icons/fa'
+import ProjectSection from './ProjectSection/ProjectSection'
+import { ProjectSectionProps } from './ProjectSection/ProjectSection'
 
 interface ProjectsSectionProps {
-    projectsArr: {
-        title: string,
-        img: string,
-        githubHref: string,
-    }[]
+    projectsArr: ProjectSectionProps[]
 }
 
 function ProjectsSection(props: ProjectsSectionProps) {
@@ -17,38 +16,35 @@ function ProjectsSection(props: ProjectsSectionProps) {
         setCubePos(event.target.classList[0])
     }
 
-    console.log(props.projectsArr)
-
     return (
         <div>
             <div>
                 <div className='grid grid-cols-2 ml-5 mr-5 my-24 gap-10 md:grid-cols-2 md:mx-auto md:my-12 md:w-11/12 lg:w-9/12 xl:w-8/12'>
                     <div className="col-span-2 md:col-span-1 mx-auto cube-container">
                         <div className={'cube ' + cubePos}>
-                            <div className="cube-face-image image-1 h-full w-full">
-                                <div className='h-full w-full relative'>
-                                    <img className="object-cover h-full w-full absolute top-0" src="codeflower.png" alt="How to code website screenshot" />
-                                    <div className='absolute bottom-0 w-full h-1/5 z-10 flex justify-center items-center text-gray-blue-950 font-bold text-2xl backdrop-blur-2xl'>
-                                        <a className="flex justify-center items-center gap-2" href='https://github.com/jzm1151/Code-Flower' target='_blank'>
-                                            <div>CodeFlower</div>
-                                            <div className='text-gray-blue-100'>
-                                                <FaGithub />
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <img className="cube-face-image image-2 object-cover h-full w-full" src="vue-2048.png" alt="Vue 2048 project screenshot" />
-                            <div className="cube-face-image image-3 backdrop-blur-xl h-full w-full"></div>
-                            <div className="cube-face-image image-4 backdrop-blur-xl h-full w-full"></div>
-                            <div className="cube-face-image image-5 backdrop-blur-xl h-full w-full"></div>
-                            <div className="cube-face-image image-6 backdrop-blur-xl h-full w-full"></div>
+                            {props.projectsArr.map((project, index) => {
+                                return (
+                                    project ? 
+                                    <ProjectSection key={index+1} project={project} index={index+1} /> :
+                                    <div key={index+1} className={'cube-face-image image-' + (index+1) + ' backdrop-blur-xl h-full w-full'}></div>
+                                )
+                            })}
                         </div>
                     </div>
 
-                    <div className="col-span-2 md:col-span-1 image-buttons">
-                        <input type="image" className="show-image-1 object-cover w-32 h-32" onClick={rotateCube} src="codeflower.png"></input>
-                        <input type="image" className="show-image-2 object-cover w-32 h-32" onClick={rotateCube} src="vue-2048.png"></input>
+                    <div className="h-72 flex justify-center items-center col-span-2 md:col-span-1 image-buttons">
+                        {props.projectsArr.map((project, index) => {
+                            return (
+                                project ? 
+                                <div key={'tile-'+(index+1)} className={'show-image-' + (index+1) + ' w-32 h-32 relative cursor-pointer border-8 border-gray-blue-950'}  onClick={rotateCube}>
+                                    <div className={'show-image-' + (index+1) + ' absolute top-0 w-full h-full z-10 flex justify-center items-center text-gray-blue-950 font-bold text-xl cursor-pointer backdrop-saturate-[' + project.saturation + ']'}>
+                                        <p className={'show-image-' + (index+1) + ' text-shadow shadow-gray-blue-400 cursor-pointer'}>{project.title}</p>
+                                    </div>
+                                    <input type="image" className={'show-image-' + (index+1) + ' object-cover w-full h-full absolute top-0 z-5 cursor-pointer'} src={project.img}></input>
+                                </div> :
+                                ''
+                            )
+                        })}
                     </div>
                 </div>
             </div>
@@ -62,7 +58,20 @@ ProjectsSection.defaultProps = {
             title: 'CodeFlower',
             img: 'codeflower.png',
             githubHref: 'https://github.com/jzm1151/Code-Flower',
+            alt: 'CodeFlower project screenshot',
+            saturation: '.4',
         },
+        {
+            title: 'Vue 2048',
+            img: 'vue-2048.png',
+            githubHref: 'https://github.com/jzm1151/vue-2048',
+            alt: 'Vue 2048 project screenshot',
+            saturation: '.4',
+        },
+        null,
+        null,
+        null,
+        null,
     ],
 }
 

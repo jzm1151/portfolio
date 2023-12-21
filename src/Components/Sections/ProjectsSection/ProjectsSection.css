@@ -33,15 +33,6 @@
 	justify-content: center;
 }
 
-.image-buttons input {
-	border: 0.2rem solid #fafafa;
-}
-
-.image-buttons input:focus {
-	outline: none;
-	border: 0.2rem solid var(--border-color);
-}
-
 /* Transform images to create cube */
 
 .image-1 {
