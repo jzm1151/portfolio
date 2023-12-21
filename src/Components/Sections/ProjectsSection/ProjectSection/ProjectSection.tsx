@@ -16,7 +16,7 @@ function ProjectSection(props: {project:ProjectSectionProps, index:number}) {
                 <img className="object-cover h-full w-full absolute top-0" src={props.project.img} alt={props.project.alt} />
                 <div className={'absolute top-0 w-full h-full z-5 flex justify-center items-center gap-2 text-gray-blue-950 font-bold  text-xl backdrop-saturate-[' + props.project.saturation +']'}>
                     <p className='text-shadow shadow-gray-blue-400'>View on GitHub</p>
-                    <div className='animate-bounce'>
+                    <div>
                         <FaArrowDown />
                     </div>
                 </div>
