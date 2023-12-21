@@ -1,7 +1,5 @@
 import { useState } from 'react'
 import './ProjectsSection.css'
-import { FaGithub } from "react-icons/fa"
-import { FaArrowDown } from 'react-icons/fa'
 import ProjectSection from './ProjectSection/ProjectSection'
 import { ProjectSectionProps } from './ProjectSection/ProjectSection'
 
