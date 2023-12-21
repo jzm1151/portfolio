@@ -19,7 +19,7 @@ function ProjectsSection(props: ProjectsSectionProps) {
     return (
         <div>
             <div>
-                <div className='grid grid-cols-2 ml-5 mr-5 my-24 gap-10 md:grid-cols-2 md:mx-auto md:my-12 md:w-11/12 lg:w-9/12 xl:w-8/12'>
+                <div className='grid grid-cols-2 ml-5 mr-5 my-24 gap-10 md:grid-cols-2 md:mx-auto md:my-12 md:w-11/12 lg:w-9/12 xl:w-8/12' id='projects'>
                     <div className='col-span-2 font-bold text-3xl md:text-4xl lg:text-5xl'>
                         <div className='w-full flex justify-center items-center gap-4 mb-20 -mt-10'>
                             <div className='bg-gray-blue-700 h-2 grow'></div>
@@ -33,7 +33,7 @@ function ProjectsSection(props: ProjectsSectionProps) {
                                 return (
                                     project ? 
                                     <ProjectSection key={index+1} project={project} index={index+1} /> :
-                                    <div key={index+1} className={'cube-face-image image-' + (index+1) + ' backdrop-blur-xl h-full w-full'}></div>
+                                    <div key={index+1} className={'cube-face-image image-' + (index+1) + ' backdrop-blur-2xl h-full w-full'}></div>
                                 )
                             })}
                         </div>
