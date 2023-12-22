@@ -2,6 +2,8 @@ import { useState } from 'react'
 import './ProjectsSection.css'
 import ProjectSection from './ProjectSection/ProjectSection'
 import { ProjectSectionProps } from './ProjectSection/ProjectSection'
+import WaveBottom from '../../Dividers/WaveBottom/WaveBottom'
+import WaveTop from '../../Dividers/WaveTop/WaveTop'
 
 interface ProjectsSectionProps {
     projectsArr: ProjectSectionProps[]
@@ -15,44 +17,49 @@ function ProjectsSection(props: ProjectsSectionProps) {
     }
 
     return (
-        <div>
-            <div>
-                <div className='grid grid-cols-2 ml-5 mr-5 my-24 gap-4 md:gap-10 md:grid-cols-2 md:mx-auto md:my-12 md:w-11/12 lg:w-9/12 xl:w-8/12' id='projects'>
-                    <div className='col-span-2 font-bold text-3xl md:text-4xl lg:text-5xl'>
-                        <div className='w-full flex justify-center items-center gap-4 mb-10 -mt-5 md:-mt-20'>
-                            <h2>Projects</h2>
-                            <div className='bg-gray-blue-700 h-2 grow'></div>
+        <>
+            <div className='h-28 md:h-0 md:-mt-10' id='projects'></div>
+            <WaveTop pathClass='fill-gray-blue-300' />
+            <div className='bg-gray-blue-300'>
+                <div>
+                    <div className='grid grid-cols-2 ml-5 mr-5 gap-4 md:gap-10 md:grid-cols-2 md:mx-auto md:w-11/12 lg:w-9/12 xl:w-8/12'>
+                        <div className='col-span-2 font-bold text-3xl md:text-4xl lg:text-5xl'>
+                            <div className='w-full flex justify-center -translate-y-20'>
+                                <h2>Projects</h2>
+                            </div>
                         </div>
-                    </div>
-                    <div className="col-span-2 md:col-span-1 mx-auto cube-container">
-                        <div className={'cube ' + cubePos}>
+                        <div className="col-span-2 md:col-span-1 mx-auto cube-container">
+                            <div className={'cube ' + cubePos}>
+                                {props.projectsArr.map((project, index) => {
+                                    return (
+                                        project ? 
+                                        <ProjectSection key={index+1} project={project} index={index+1} /> :
+                                        <div key={index+1} className={'cube-face-image image-' + (index+1) + ' backdrop-blur-2xl h-full w-full'}></div>
+                                    )
+                                })}
+                            </div>
+                        </div>
+
+                        <div className="h-48 md:h-72 flex justify-center items-center gap-2 col-span-2 md:col-span-1">
                             {props.projectsArr.map((project, index) => {
                                 return (
                                     project ? 
-                                    <ProjectSection key={index+1} project={project} index={index+1} /> :
-                                    <div key={index+1} className={'cube-face-image image-' + (index+1) + ' backdrop-blur-2xl h-full w-full'}></div>
+                                    <div key={'tile-'+(index+1)} className={'show-image-' + (index+1) + ' w-24 h-24  xl:w-40 xl:h-40 relative cursor-pointer border-8 border-gray-blue-950'}  onClick={rotateCube}>
+                                        <div className={'show-image-' + (index+1) + ' absolute top-0 w-full h-full z-10 flex justify-center items-center text-gray-blue-950 font-bold cursor-pointer backdrop-saturate-50 xl:text-xl'}>
+                                            <p className={'show-image-' + (index+1) + ' text-shadow shadow-gray-blue-400 cursor-pointer text-center'}>{project.title}</p>
+                                        </div>
+                                        <input type="image" className={'show-image-' + (index+1) + ' object-cover w-full h-full absolute top-0 z-5 cursor-pointer'} src={project.img}></input>
+                                    </div> :
+                                    ''
                                 )
                             })}
                         </div>
-                    </div>
-
-                    <div className="h-48 md:h-72 flex justify-center items-center gap-2 col-span-2 md:col-span-1">
-                        {props.projectsArr.map((project, index) => {
-                            return (
-                                project ? 
-                                <div key={'tile-'+(index+1)} className={'show-image-' + (index+1) + ' w-24 h-24  xl:w-40 xl:h-40 relative cursor-pointer border-8 border-gray-blue-950'}  onClick={rotateCube}>
-                                    <div className={'show-image-' + (index+1) + ' absolute top-0 w-full h-full z-10 flex justify-center items-center text-gray-blue-950 font-bold cursor-pointer backdrop-saturate-50 xl:text-xl'}>
-                                        <p className={'show-image-' + (index+1) + ' text-shadow shadow-gray-blue-400 cursor-pointer text-center'}>{project.title}</p>
-                                    </div>
-                                    <input type="image" className={'show-image-' + (index+1) + ' object-cover w-full h-full absolute top-0 z-5 cursor-pointer'} src={project.img}></input>
-                                </div> :
-                                ''
-                            )
-                        })}
+                        <br />
                     </div>
                 </div>
             </div>
-        </div>
+            <WaveBottom pathClass='fill-gray-blue-300' />
+        </>
     )
 }
 
