@@ -9,7 +9,7 @@ function HomePage() {
     <>
       <HeaderNav />
       <main>
-        <GreetingSection position='col-span-2'/>
+        <GreetingSection />
         <AboutSection />
         <ProjectsSection />
       </main>
