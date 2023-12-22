@@ -48,15 +48,15 @@ function ProjectsSection(props: ProjectsSectionProps) {
                                         <div className={'show-image-' + (index+1) + ' absolute top-0 w-full h-full z-10 flex justify-center items-center text-gray-blue-950 font-bold cursor-pointer backdrop-saturate-50 xl:text-xl'}>
                                             <p className={'show-image-' + (index+1) + ' text-shadow shadow-gray-blue-400 cursor-pointer text-center'}>{project.title}</p>
                                         </div>
-                                        <input type="image" className={'show-image-' + (index+1) + ' object-cover w-full h-full absolute top-0 z-5 cursor-pointer'} src={project.img}></input>
+                                        <input type="image" className={'show-image-' + (index+1) + ' object-cover w-full h-full absolute top-0 z-5 cursor-pointer'} src={project.img} alt={project.alt}></input>
                                     </div> :
                                     ''
                                 )
                             })}
                         </div>
-                        <br />
                     </div>
                 </div>
+                <div className='md:h-14'></div>
             </div>
             <WaveBottom pathClass='fill-gray-blue-300' />
         </>
