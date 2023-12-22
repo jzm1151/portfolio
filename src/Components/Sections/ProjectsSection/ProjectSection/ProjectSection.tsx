@@ -6,7 +6,6 @@ export interface ProjectSectionProps {
     img: string,
     githubHref: string,
     alt: string,
-    saturation: string,
 }
 
 function ProjectSection(props: {project:ProjectSectionProps, index:number}) {
@@ -14,7 +13,7 @@ function ProjectSection(props: {project:ProjectSectionProps, index:number}) {
         <div className={'cube-face-image image-' + props.index + ' h-full w-full'}>
             <div className='h-full w-full relative'>
                 <img className="object-cover h-full w-full absolute top-0" src={props.project.img} alt={props.project.alt} />
-                <div className={'absolute top-0 w-full h-full z-5 flex justify-center items-center gap-2 text-gray-blue-950 font-bold text-xl backdrop-saturate-[' + props.project.saturation +']'}>
+                <div className={'absolute top-0 w-full h-full z-5 flex justify-center items-center gap-2 text-gray-blue-950 font-bold text-xl backdrop-saturate-50'}>
                     <p className='text-shadow shadow-gray-blue-400'>View on GitHub</p>
                     <div>
                         <FaArrowDown />
