@@ -17,11 +17,10 @@ function ProjectsSection(props: ProjectsSectionProps) {
     return (
         <div>
             <div>
-                <div className='grid grid-cols-2 ml-5 mr-5 my-24 gap-10 md:grid-cols-2 md:mx-auto md:my-12 md:w-11/12 lg:w-9/12 xl:w-8/12' id='projects'>
+                <div className='grid grid-cols-2 ml-5 mr-5 my-24 gap-4 md:gap-10 md:grid-cols-2 md:mx-auto md:my-12 md:w-11/12 lg:w-9/12 xl:w-8/12' id='projects'>
                     <div className='col-span-2 font-bold text-3xl md:text-4xl lg:text-5xl'>
-                        <div className='w-full flex justify-center items-center gap-4 mb-20 -mt-10'>
-                            <div className='bg-gray-blue-700 h-2 grow'></div>
-                                <h2>Projects</h2>
+                        <div className='w-full flex justify-center items-center gap-4 mb-20 -mt-5 md:-mt-10'>
+                            <h2>Projects</h2>
                             <div className='bg-gray-blue-700 h-2 grow'></div>
                         </div>
                     </div>
@@ -37,11 +36,11 @@ function ProjectsSection(props: ProjectsSectionProps) {
                         </div>
                     </div>
 
-                    <div className="h-72 flex justify-center items-center col-span-2 md:col-span-1 image-buttons">
+                    <div className="h-48 md:h-72 flex justify-center items-center gap-2 col-span-2 md:col-span-1">
                         {props.projectsArr.map((project, index) => {
                             return (
                                 project ? 
-                                <div key={'tile-'+(index+1)} className={'show-image-' + (index+1) + ' w-32 h-32 relative cursor-pointer border-8 border-gray-blue-950'}  onClick={rotateCube}>
+                                <div key={'tile-'+(index+1)} className={'show-image-' + (index+1) + ' w-24 h-24  xl:w-40 xl:h-40 relative cursor-pointer border-8 border-gray-blue-950'}  onClick={rotateCube}>
                                     <div className={'show-image-' + (index+1) + ' absolute top-0 w-full h-full z-10 flex justify-center items-center text-gray-blue-950 font-bold text-xl cursor-pointer backdrop-saturate-[' + project.saturation + ']'}>
                                         <p className={'show-image-' + (index+1) + ' text-shadow shadow-gray-blue-400 cursor-pointer text-center'}>{project.title}</p>
                                     </div>
@@ -71,7 +70,7 @@ ProjectsSection.defaultProps = {
             img: 'path-finder.png',
             githubHref: 'https://github.com/jzm1151/path-finding-visualizer-with-roomdb',
             alt: 'Path Finder project screenshot',
-            saturation: '.1',
+            saturation: '.4',
         },
         null,
         null,

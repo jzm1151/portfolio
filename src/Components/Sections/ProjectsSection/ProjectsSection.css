@@ -26,13 +26,6 @@
 				0 0 3rem var(--border-color);
 }
 
-.image-buttons {
-	display: grid;
-	grid-template-columns: repeat(3, auto);
-	grid-gap: 1.5rem;
-	justify-content: center;
-}
-
 /* Transform images to create cube */
 
 .image-1 {
