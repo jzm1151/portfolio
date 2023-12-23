@@ -44,7 +44,7 @@ function ProjectsSection(props: ProjectsSectionProps) {
                             {props.projectsArr.map((project, index) => {
                                 return (
                                     project ? 
-                                    <input type="image" onClick={rotateCube} className={'show-image-' + (index+1) + ' object-cover w-20 h-20'} src={project.img} alt={project.alt}></input>:
+                                    <input type="image" key={'tile-' + index} onClick={rotateCube} className={'show-image-' + (index+1) + ' object-cover w-20 h-20'} src={project.img} alt={project.alt}></input>:
                                     ''
                                 )
                             })}
