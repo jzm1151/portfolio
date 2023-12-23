@@ -9,12 +9,47 @@ interface ProjectsSectionProps {
     projectsArr: ProjectSectionProps[]
 }
 
+const updateCubeFacePositions = (projectObj:ProjectsSectionProps, desProject:number, currProject:number) => {
+    const projectArr = projectObj.projectsArr
+    const rePos = projectArr[desProject].currentPos
+
+    if (projectArr[currProject].currentPos === 0) {
+        projectArr.map((project) => {
+            if (project && project.currentPos === 1) {
+                project.currentPos = rePos
+            }
+        })
+        projectArr[desProject].currentPos = 1
+    } else {
+        projectArr.map((project) => {
+            if (project && project.currentPos === 0) {
+                project.currentPos = rePos
+            }
+        })
+        projectArr[desProject].currentPos = 0
+    }
+}
+
+const cloneAndSortProjectsArr = (projectsArr:ProjectSectionProps[]) => {
+    const projectArrClone = new Array(projectsArr.length).fill(null)
+    projectsArr.map((project) => {
+        if (project) {
+            projectArrClone[project.currentPos] = project
+        }
+    })
+    return projectArrClone
+}
+
 function ProjectsSection(props: ProjectsSectionProps) {
     const [cubePos, setCubePos] = useState('initial-position')
+    const [projectArrPos, setProjectArrPos] = useState(0)
 
-    const rotateCube = (event:any) => {
-
-        setCubePos(event.target.classList[0])
+    const rotateCube = (desProject:number) => {
+        if (desProject != projectArrPos) {
+            updateCubeFacePositions(props, desProject, projectArrPos)
+        }
+        setProjectArrPos(desProject)
+        setCubePos('show-image-' + (props.projectsArr[desProject].currentPos+1))
     }
 
     return (
@@ -31,7 +66,7 @@ function ProjectsSection(props: ProjectsSectionProps) {
                         </div>
                         <div className="col-span-2 md:col-span-1 mx-auto cube-container">
                             <div className={'cube ' + cubePos}>
-                                {props.projectsArr.map((project, index) => {
+                                {cloneAndSortProjectsArr(props.projectsArr).map((project, index) => {
                                     return (
                                         project ? 
                                         <ProjectSection key={index+1} project={project} index={index+1} /> :
@@ -45,11 +80,11 @@ function ProjectsSection(props: ProjectsSectionProps) {
                             {props.projectsArr.map((project, index) => {
                                 return (
                                     project ? 
-                                    <div key={'tile-'+(index+1)} className={'show-image-' + (index+1) + ' w-24 h-24  xl:w-40 xl:h-40 relative cursor-pointer border-8 border-gray-blue-950'}  onClick={rotateCube}>
-                                        <div className={'show-image-' + (index+1) + ' absolute top-0 w-full h-full z-10 flex justify-center items-center text-gray-blue-950 font-bold cursor-pointer backdrop-saturate-50 xl:text-xl'}>
-                                            <p className={'show-image-' + (index+1) + ' text-shadow shadow-gray-blue-400 cursor-pointer text-center'}>{project.title}</p>
+                                    <div key={'tile-'+(index+1)} className={'w-24 h-24  xl:w-40 xl:h-40 relative cursor-pointer border-8 border-gray-blue-950'}  onClick={() => rotateCube(index)}>
+                                        <div className={'absolute top-0 w-full h-full z-10 flex justify-center items-center text-gray-blue-950 font-bold cursor-pointer backdrop-saturate-50 xl:text-xl'}>
+                                            <p className={'text-shadow shadow-gray-blue-400 cursor-pointer text-center'}>{project.title}</p>
                                         </div>
-                                        <input type="image" className={'show-image-' + (index+1) + ' object-cover w-full h-full absolute top-0 z-5 cursor-pointer'} src={project.img} alt={project.alt}></input>
+                                        <input type="image" className={'object-cover w-full h-full absolute top-0 z-5 cursor-pointer'} src={project.img} alt={project.alt}></input>
                                     </div> :
                                     ''
                                 )
