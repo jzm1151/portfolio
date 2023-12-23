@@ -19,14 +19,14 @@ function ProjectSection(props: {project:ProjectSectionProps, index:number}) {
                         <FaArrowDown />
                     </div>
                 </div>
-                <div className='absolute bottom-0 w-full h-1/5 z-10 flex justify-center items-center text-gray-blue-950 font-bold text-2xl backdrop-blur-2xl'>
+                {/* <div className='absolute bottom-0 w-full h-1/5 z-10 flex justify-center items-center text-gray-blue-950 font-bold text-2xl backdrop-blur-2xl'>
                     <a className='flex justify-center items-center gap-2' href={props.project.githubHref} target='_blank'>
                         <div>{props.project.title}</div>
                         <div className='text-gray-blue-100'>
                             <FaGithub />
                         </div>
                     </a>
-                </div>
+                </div> */}
             </div>
         </div>
     )

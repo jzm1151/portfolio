@@ -71,7 +71,12 @@ ProjectsSection.defaultProps = {
             githubHref: 'https://github.com/jzm1151/Code-Flower',
             alt: 'CodeFlower project screenshot',
         },
-        null,
+        {
+            title: 'Path Finder',
+            img: 'path-finder.png',
+            githubHref: 'https://github.com/jzm1151/path-finding-visualizer-with-roomdb',
+            alt: 'Path Finder project screenshot',
+        },
         null,
         null,
         {
