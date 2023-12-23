@@ -23,18 +23,18 @@ function ProjectsSection(props: ProjectsSectionProps) {
             <div className='bg-gray-blue-300'>
                 <div>
                     <div className='grid grid-cols-2 ml-5 mr-5 gap-4 md:gap-10 md:grid-cols-2 md:mx-auto md:w-11/12 lg:w-9/12 xl:w-8/12'>
-                        <div className='col-span-2 font-bold text-3xl md:text-4xl lg:text-5xl'>
+                        {/* <div className='col-span-2 font-bold text-3xl md:text-4xl lg:text-5xl'>
                             <div className='w-full flex justify-center -translate-y-20'>
                                 <h2>Projects</h2>
                             </div>
-                        </div>
-                        <div className="col-span-2 md:col-span-1 mx-auto cube-container">
+                        </div> */}
+                        <div className="col-span-2 md:col-span-1 cube-container">
                             <div className={'cube ' + cubePos}>
                                 {props.projectsArr.map((project, index) => {
                                     return (
                                         project ? 
                                         <ProjectSection key={index+1} project={project} index={index+1} /> :
-                                        <div key={index+1} className={'cube-face-image image-' + (index+1) + ' h-64 w-64'}></div>
+                                        <div key={index+1} className={'cube-face-image image-' + (index+1) + ' backdrop-blur-2xl h-full w-full'}></div>
                                     )
                                 })}
                             </div>
