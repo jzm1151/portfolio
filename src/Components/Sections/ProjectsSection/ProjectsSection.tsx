@@ -34,7 +34,7 @@ function ProjectsSection(props: ProjectsSectionProps) {
                                     return (
                                         project ? 
                                         <ProjectSection key={index+1} project={project} index={index+1} /> :
-                                        <div key={index+1} className={'cube-face-image image-' + (index+1) + ' backdrop-blur-2xl h-full w-full'}></div>
+                                        <div key={index+1} className={'cube-face-image image-' + (index+1) + ' h-64 w-64'}></div>
                                     )
                                 })}
                             </div>
