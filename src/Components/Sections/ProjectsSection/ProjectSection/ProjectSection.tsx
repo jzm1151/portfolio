@@ -1,5 +1,5 @@
 // import { FaGithub } from "react-icons/fa";
-import { FaArrowDown } from 'react-icons/fa';
+// import { FaArrowDown } from 'react-icons/fa';
 
 export interface ProjectSectionProps {
     title: string,
