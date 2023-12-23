@@ -77,30 +77,15 @@ ProjectsSection.defaultProps = {
             githubHref: 'https://github.com/jzm1151/path-finding-visualizer-with-roomdb',
             alt: 'Path Finder project screenshot',
         },
-        {
-            title: 'Path Finder',
-            img: 'path-finder.png',
-            githubHref: 'https://github.com/jzm1151/path-finding-visualizer-with-roomdb',
-            alt: 'Path Finder project screenshot',
-        },
-        {
-            title: 'Path Finder',
-            img: 'path-finder.png',
-            githubHref: 'https://github.com/jzm1151/path-finding-visualizer-with-roomdb',
-            alt: 'Path Finder project screenshot',
-        },
+        null,
         {
             title: 'Vue 2048',
             img: 'vue-2048.png',
             githubHref: 'https://github.com/jzm1151/vue-2048',
             alt: 'Vue 2048 project screenshot',
         },
-        {
-            title: 'Path Finder',
-            img: 'path-finder.png',
-            githubHref: 'https://github.com/jzm1151/path-finding-visualizer-with-roomdb',
-            alt: 'Path Finder project screenshot',
-        },
+        null,
+        null,
     ],
 }
 
