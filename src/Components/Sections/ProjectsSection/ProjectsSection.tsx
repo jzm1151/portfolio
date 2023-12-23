@@ -23,12 +23,12 @@ function ProjectsSection(props: ProjectsSectionProps) {
             <div className='bg-gray-blue-300'>
                 <div>
                     <div className='grid grid-cols-2 ml-5 mr-5 gap-4 md:gap-10 md:grid-cols-2 md:mx-auto md:w-11/12 lg:w-9/12 xl:w-8/12'>
-                        {/* <div className='col-span-2 font-bold text-3xl md:text-4xl lg:text-5xl'>
+                        <div className='col-span-2 font-bold text-3xl md:text-4xl lg:text-5xl'>
                             <div className='w-full flex justify-center -translate-y-20'>
                                 <h2>Projects</h2>
                             </div>
-                        </div> */}
-                        <div className="col-span-2 md:col-span-1 cube-container">
+                        </div>
+                        <div className="col-span-2 md:col-span-1 mx-auto cube-container">
                             <div className={'cube ' + cubePos}>
                                 {props.projectsArr.map((project, index) => {
                                     return (
@@ -44,12 +44,7 @@ function ProjectsSection(props: ProjectsSectionProps) {
                             {props.projectsArr.map((project, index) => {
                                 return (
                                     project ? 
-                                    <div key={'tile-'+(index+1)} className={'show-image-' + (index+1) + ' w-24 h-24  xl:w-40 xl:h-40 relative cursor-pointer border-8 border-gray-blue-950'}  onClick={rotateCube}>
-                                        <div className={'show-image-' + (index+1) + ' absolute top-0 w-full h-full z-10 flex justify-center items-center text-gray-blue-950 font-bold cursor-pointer backdrop-saturate-50 xl:text-xl'}>
-                                            <p className={'show-image-' + (index+1) + ' text-shadow shadow-gray-blue-400 cursor-pointer text-center'}>{project.title}</p>
-                                        </div>
-                                        <input type="image" className={'show-image-' + (index+1) + ' object-cover w-full h-full absolute top-0 z-5 cursor-pointer'} src={project.img} alt={project.alt}></input>
-                                    </div> :
+                                    <input type="image" onClick={rotateCube} className={'show-image-' + (index+1) + ' object-cover w-20 h-20'} src={project.img} alt={project.alt}></input>:
                                     ''
                                 )
                             })}
