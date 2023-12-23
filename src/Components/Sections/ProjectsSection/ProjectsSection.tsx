@@ -13,6 +13,7 @@ function ProjectsSection(props: ProjectsSectionProps) {
     const [cubePos, setCubePos] = useState('initial-position')
 
     const rotateCube = (event:any) => {
+
         setCubePos(event.target.classList[0])
     }
 
@@ -44,7 +45,12 @@ function ProjectsSection(props: ProjectsSectionProps) {
                             {props.projectsArr.map((project, index) => {
                                 return (
                                     project ? 
-                                    <input type="image" key={'tile-' + index} onClick={rotateCube} className={'show-image-' + (index+1) + ' object-cover w-20 h-20'} src={project.img} alt={project.alt}></input>:
+                                    <div key={'tile-'+(index+1)} className={'show-image-' + (index+1) + ' w-24 h-24  xl:w-40 xl:h-40 relative cursor-pointer border-8 border-gray-blue-950'}  onClick={rotateCube}>
+                                        <div className={'show-image-' + (index+1) + ' absolute top-0 w-full h-full z-10 flex justify-center items-center text-gray-blue-950 font-bold cursor-pointer backdrop-saturate-50 xl:text-xl'}>
+                                            <p className={'show-image-' + (index+1) + ' text-shadow shadow-gray-blue-400 cursor-pointer text-center'}>{project.title}</p>
+                                        </div>
+                                        <input type="image" className={'show-image-' + (index+1) + ' object-cover w-full h-full absolute top-0 z-5 cursor-pointer'} src={project.img} alt={project.alt}></input>
+                                    </div> :
                                     ''
                                 )
                             })}
@@ -65,12 +71,14 @@ ProjectsSection.defaultProps = {
             img: 'codeflower.png',
             githubHref: 'https://github.com/jzm1151/Code-Flower',
             alt: 'CodeFlower project screenshot',
+            currentPos: 0,
         },
         {
             title: 'Path Finder',
             img: 'path-finder.png',
             githubHref: 'https://github.com/jzm1151/path-finding-visualizer-with-roomdb',
             alt: 'Path Finder project screenshot',
+            currentPos: 1,
         },
         null,
         null,
@@ -79,6 +87,7 @@ ProjectsSection.defaultProps = {
             img: 'vue-2048.png',
             githubHref: 'https://github.com/jzm1151/vue-2048',
             alt: 'Vue 2048 project screenshot',
+            currentPos: 4,
         },
         null,
     ],

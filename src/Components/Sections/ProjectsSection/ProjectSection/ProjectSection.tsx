@@ -6,6 +6,7 @@ export interface ProjectSectionProps {
     img: string,
     githubHref: string,
     alt: string,
+    currentPos: number,
 }
 
 function ProjectSection(props: {project:ProjectSectionProps, index:number}) {
