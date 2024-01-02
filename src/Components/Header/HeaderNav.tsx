@@ -3,6 +3,7 @@ import NoBorderBtn from "../../UI/Buttons/NoBorderBtn"
 import BorderBtn from "../../UI/Buttons/BorderBtn"
 import MobileFullBtn from "../../UI/Buttons/Mobile/MobileFullBtn"
 import MobileNoBorderBtn from "../../UI/Buttons/Mobile/MobileNoBorderBtn"
+import SiteLogo from "../../UI/Logos/SiteLogo"
 
 function HeaderNav() {
     const [showMenu, setShowMenu] = useState(false)
@@ -23,7 +24,7 @@ function HeaderNav() {
         <div className='fixed w-full drop-shadow-lg top-0 z-20'>
             <div className='bg-gray-blue-400 w-full h-20 flex items-center justify-between p-5 md:p-10 z-100 relative'>
                 <div className='flex-grow text-gray-blue-950 text-2xl md:text-4xl font-bold'>
-                    Jacob Moore
+                    <SiteLogo />
                 </div>
                 <div className="hidden md:block">
                     <NoBorderBtn link='#about' text='About' />
