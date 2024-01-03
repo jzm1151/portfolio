@@ -3,7 +3,7 @@ import { FaGithub } from "react-icons/fa"
 
 function Footer() {
     return (
-        <div className='h-20 w-full flex flex-col justify-center items-center bg-gray-blue-600'>
+        <div className='h-20 w-full flex flex-col justify-center items-center bg-gray-blue-600 mt-14 md:mt-24'>
             <div className='text-xl xl:text-3xl font-bold'>
                 <SiteLogo />
             </div>
