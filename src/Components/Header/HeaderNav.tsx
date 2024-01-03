@@ -30,7 +30,7 @@ function HeaderNav() {
                     <NoBorderBtn link='#about' text='About' />
                     <NoBorderBtn link='#projects' text='Projects' />
                     <NoBorderBtn link='#contact' text='Contact' />
-                    <BorderBtn link='#resume' text='Resume' blankTarget={true} />
+                    <BorderBtn link='https://1drv.ms/w/s!AsBprLAmKhHYkVxUv4jgMH8kx7K9?e=5Pr76y' text='Resume' blankTarget={true} />
                 </div>
                 <div className='md:hidden'>
                     <svg className='absolute top-5 right-5 z-[9999] fill-gray-blue-950 cursor-pointer' xmlns="http://www.w3.org/2000/svg" height="40" viewBox="0 -960 960 960" width="40"
@@ -49,7 +49,7 @@ function HeaderNav() {
                     <MobileNoBorderBtn onClick={closeMenu} link='#about' text='About' />
                     <MobileNoBorderBtn onClick={closeMenu} link='#projects' text='Projects' />
                     <MobileNoBorderBtn onClick={closeMenu} link='#contact' text='Contact' />
-                    <MobileFullBtn link='#resume' text='Resume' blankTarget={true} />
+                    <MobileFullBtn link='https://1drv.ms/w/s!AsBprLAmKhHYkVxUv4jgMH8kx7K9?e=5Pr76y' text='Resume' blankTarget={true} />
                 </div>
             </div>
         </div>
