@@ -39,7 +39,9 @@ function ContactSection() {
                         <BorderBtn link='mailto:jakemoore271@outlook.com' text='Send Email' />
                     </div>
                 </div>
-                <div className='col-span-2 md:col-span-1'></div>
+                <div className='hidden md:inline-block col-span-2 md:col-span-1'>
+                    <img className='saturate-50 brightness-125' src='/contact-graphic.png' alt='Picture of a bird with a message bubble coming from the beak' />
+                </div>
                 <div className='col-span-2 grid grid-cols-3 gap-4'>
                     {
                         infoTiles.map(infoTile => (
