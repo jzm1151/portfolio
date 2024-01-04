@@ -84,7 +84,7 @@ function ProjectsSection(props: ProjectsSectionProps) {
                                         <div className={'absolute top-0 w-full h-full z-10 flex justify-center items-center text-gray-blue-950 font-bold cursor-pointer backdrop-saturate-50 xl:text-xl'}>
                                             <p className={'text-shadow shadow-gray-blue-400 cursor-pointer text-center'}>{project.title}</p>
                                         </div>
-                                        <input type="image" className={'object-cover w-full h-full absolute top-0 z-5 cursor-pointer'} src={project.img} alt={project.alt}></input>
+                                        <input type="image" className={'object-cover w-full h-full absolute top-0 z-5 cursor-pointer rounded-none'} src={project.img} alt={project.alt}></input>
                                     </div> :
                                     ''
                                 )
