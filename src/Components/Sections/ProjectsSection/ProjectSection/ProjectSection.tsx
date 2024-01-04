@@ -13,7 +13,7 @@ function ProjectSection(props: {project:ProjectSectionProps, index:number}) {
     return (
         <div className={'cube-face-image image-' + props.index + ' h-full w-full'}>
             <div className='h-full w-full relative'>
-                <img className="object-cover h-full w-full absolute top-0" src={props.project.img} alt={props.project.alt} />
+                <img className="object-cover h-full w-full absolute top-0 saturate-50" src={props.project.img} alt={props.project.alt} />
                 <div className={'absolute top-0 w-full h-full z-5 flex justify-center items-center gap-2 text-gray-blue-950 font-bold text-xl'}>
                     <p className='text-shadow shadow-gray-blue-400'>View on GitHub</p>
                     <div>
