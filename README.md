@@ -1,24 +1,6 @@
-# Theme colors
+# Jacob Moore Portfolio
 
-50
-F2F7FB
-100
-E7F0F8
-200
-D3E2F2
-300
-B9CFE8
-400
-9CB6DD
-500
-839DD1
-600
-6A7FC1
-700
-6374AE
-800
-4A5989
-900
-414E6E
-950
-262C40
+Portfolio site build with React, Tailwindcss, and TypeScript
+
+https://jacobmoore.io/
+
