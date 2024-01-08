@@ -1,7 +1,9 @@
 function SiteLogo() {
     return (
         <div>
-            <a href='#'>{'<'}Jacob Moore{'/>'}</a>
+            <a href='#'>
+                {'<'}Jacob Moore{'/>'}
+            </a>
         </div>
     )
 }
