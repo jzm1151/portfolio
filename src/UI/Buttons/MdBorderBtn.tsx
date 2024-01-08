@@ -1,8 +1,8 @@
 function MdBorderBtn(props: {
-    link: string
-    text: string
-    onClick?: () => void
-    blankTarget?: boolean
+    link: string;
+    text: string;
+    onClick?: () => void;
+    blankTarget?: boolean;
 }) {
     return (
         <a
@@ -13,7 +13,7 @@ function MdBorderBtn(props: {
         >
             {props.text}
         </a>
-    )
+    );
 }
 
-export default MdBorderBtn
+export default MdBorderBtn;

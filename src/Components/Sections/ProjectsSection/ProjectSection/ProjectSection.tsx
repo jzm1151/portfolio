@@ -1,17 +1,17 @@
-import { FaGithub } from 'react-icons/fa'
-import { FaArrowDown } from 'react-icons/fa'
+import { FaGithub } from 'react-icons/fa';
+import { FaArrowDown } from 'react-icons/fa';
 
 export interface ProjectSectionProps {
-    title: string
-    img: string
-    githubHref: string
-    alt: string
-    currentPos: number
+    title: string;
+    img: string;
+    githubHref: string;
+    alt: string;
+    currentPos: number;
 }
 
 function ProjectSection(props: {
-    project: ProjectSectionProps
-    index: number
+    project: ProjectSectionProps;
+    index: number;
 }) {
     return (
         <div
@@ -51,7 +51,7 @@ function ProjectSection(props: {
                 </div>
             </div>
         </div>
-    )
+    );
 }
 
-export default ProjectSection
+export default ProjectSection;

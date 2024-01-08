@@ -1,5 +1,5 @@
-import SiteLogo from '../../UI/Logos/SiteLogo'
-import { FaGithub } from 'react-icons/fa'
+import SiteLogo from '../../UI/Logos/SiteLogo';
+import { FaGithub } from 'react-icons/fa';
 
 function Footer() {
     return (
@@ -12,7 +12,7 @@ function Footer() {
                 <FaGithub className='inline' />
             </a>
         </div>
-    )
+    );
 }
 
-export default Footer
+export default Footer;

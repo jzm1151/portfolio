@@ -5,7 +5,7 @@ function SiteLogo() {
                 {'<'}Jacob Moore{'/>'}
             </a>
         </div>
-    )
+    );
 }
 
-export default SiteLogo
+export default SiteLogo;

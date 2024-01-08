@@ -1,8 +1,8 @@
 function NoBorderBtn(props: {
-    link: string
-    text: string
-    onClick?: () => void
-    blankTarget?: boolean
+    link: string;
+    text: string;
+    onClick?: () => void;
+    blankTarget?: boolean;
 }) {
     return (
         <a
@@ -13,7 +13,7 @@ function NoBorderBtn(props: {
         >
             {props.text}
         </a>
-    )
+    );
 }
 
-export default NoBorderBtn
+export default NoBorderBtn;

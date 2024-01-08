@@ -1,4 +1,4 @@
-import SkillLogo from '../../UI/Logos/SkillLogo'
+import SkillLogo from '../../UI/Logos/SkillLogo';
 
 function AboutSection() {
     return (
@@ -201,7 +201,7 @@ function AboutSection() {
             </div>
             <div className='bg-gray-blue-950 skew-y-3 relative -z-10 h-40 md:h-52 md:-translate-y-28 lg:h-72 lg:-translate-y-48 2xl:-translate-y-52'></div>
         </section>
-    )
+    );
 }
 
-export default AboutSection
+export default AboutSection;

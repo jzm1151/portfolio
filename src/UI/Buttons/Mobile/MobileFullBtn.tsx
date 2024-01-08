@@ -1,8 +1,8 @@
 function MobileFullBtn(props: {
-    link: string
-    text: string
-    onClick?: () => void
-    blankTarget?: boolean
+    link: string;
+    text: string;
+    onClick?: () => void;
+    blankTarget?: boolean;
 }) {
     return (
         <a
@@ -13,7 +13,7 @@ function MobileFullBtn(props: {
         >
             {props.text}
         </a>
-    )
+    );
 }
 
-export default MobileFullBtn
+export default MobileFullBtn;

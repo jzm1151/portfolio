@@ -1,16 +1,16 @@
-import MdBorderBtn from '../../UI/Buttons/MdBorderBtn'
+import MdBorderBtn from '../../UI/Buttons/MdBorderBtn';
 
 function GreetingSection() {
-    const dateUser = new Date()
-    const hours = dateUser.getHours()
-    let greeting = ''
+    const dateUser = new Date();
+    const hours = dateUser.getHours();
+    let greeting = '';
 
     if (hours < 12) {
-        greeting = 'Good Morning'
+        greeting = 'Good Morning';
     } else if (hours < 17) {
-        greeting = 'Good Afternoon'
+        greeting = 'Good Afternoon';
     } else {
-        greeting = 'Good Evening'
+        greeting = 'Good Evening';
     }
 
     return (
@@ -33,7 +33,7 @@ function GreetingSection() {
                 />
             </section>
         </section>
-    )
+    );
 }
 
-export default GreetingSection
+export default GreetingSection;

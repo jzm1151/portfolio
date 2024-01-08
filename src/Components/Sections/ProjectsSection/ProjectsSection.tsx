@@ -1,12 +1,12 @@
-import { useState } from 'react'
-import './ProjectsSection.css'
-import ProjectSection from './ProjectSection/ProjectSection'
-import { ProjectSectionProps } from './ProjectSection/ProjectSection'
-import WaveBottom from '../../Dividers/WaveBottom/WaveBottom'
-import WaveTop from '../../Dividers/WaveTop/WaveTop'
+import { useState } from 'react';
+import './ProjectsSection.css';
+import ProjectSection from './ProjectSection/ProjectSection';
+import { ProjectSectionProps } from './ProjectSection/ProjectSection';
+import WaveBottom from '../../Dividers/WaveBottom/WaveBottom';
+import WaveTop from '../../Dividers/WaveTop/WaveTop';
 
 interface ProjectsSectionProps {
-    projectsArr: ProjectSectionProps[]
+    projectsArr: ProjectSectionProps[];
 }
 
 const updateCubeFacePositions = (
@@ -14,49 +14,49 @@ const updateCubeFacePositions = (
     desProject: number,
     currProject: number
 ) => {
-    const projectArr = projectObj.projectsArr
-    const rePos = projectArr[desProject].currentPos
+    const projectArr = projectObj.projectsArr;
+    const rePos = projectArr[desProject].currentPos;
 
     if (projectArr[currProject].currentPos === 0) {
         projectArr.map((project) => {
             if (project && project.currentPos === 1) {
-                project.currentPos = rePos
+                project.currentPos = rePos;
             }
-        })
-        projectArr[desProject].currentPos = 1
+        });
+        projectArr[desProject].currentPos = 1;
     } else {
         projectArr.map((project) => {
             if (project && project.currentPos === 0) {
-                project.currentPos = rePos
+                project.currentPos = rePos;
             }
-        })
-        projectArr[desProject].currentPos = 0
+        });
+        projectArr[desProject].currentPos = 0;
     }
-}
+};
 
 const cloneAndSortProjectsArr = (projectsArr: ProjectSectionProps[]) => {
-    const projectArrClone = new Array(projectsArr.length).fill(null)
+    const projectArrClone = new Array(projectsArr.length).fill(null);
     projectsArr.map((project) => {
         if (project) {
-            projectArrClone[project.currentPos] = project
+            projectArrClone[project.currentPos] = project;
         }
-    })
-    return projectArrClone
-}
+    });
+    return projectArrClone;
+};
 
 function ProjectsSection(props: ProjectsSectionProps) {
-    const [cubePos, setCubePos] = useState('initial-position')
-    const [projectArrPos, setProjectArrPos] = useState(0)
+    const [cubePos, setCubePos] = useState('initial-position');
+    const [projectArrPos, setProjectArrPos] = useState(0);
 
     const rotateCube = (desProject: number) => {
         if (desProject != projectArrPos) {
-            updateCubeFacePositions(props, desProject, projectArrPos)
+            updateCubeFacePositions(props, desProject, projectArrPos);
         }
-        setProjectArrPos(desProject)
+        setProjectArrPos(desProject);
         setCubePos(
             'show-image-' + (props.projectsArr[desProject].currentPos + 1)
-        )
-    }
+        );
+    };
 
     return (
         <>
@@ -89,7 +89,7 @@ function ProjectsSection(props: ProjectsSectionProps) {
                                                     ' backdrop-blur-2xl h-full w-full'
                                                 }
                                             ></div>
-                                        )
+                                        );
                                     }
                                 )}
                             </div>
@@ -129,7 +129,7 @@ function ProjectsSection(props: ProjectsSectionProps) {
                                     </div>
                                 ) : (
                                     ''
-                                )
+                                );
                             })}
                         </div>
                     </div>
@@ -138,7 +138,7 @@ function ProjectsSection(props: ProjectsSectionProps) {
             </div>
             <WaveBottom pathClass='fill-gray-blue-300' />
         </>
-    )
+    );
 }
 
 ProjectsSection.defaultProps = {
@@ -169,6 +169,6 @@ ProjectsSection.defaultProps = {
         },
         null,
     ],
-}
+};
 
-export default ProjectsSection
+export default ProjectsSection;

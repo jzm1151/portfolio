@@ -1,6 +1,6 @@
-import BorderBtn from '../../../UI/Buttons/MdBorderBtn'
-import InfoTile from '../../../UI/InfoTiles/InfoTile'
-import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt } from 'react-icons/fa'
+import BorderBtn from '../../../UI/Buttons/MdBorderBtn';
+import InfoTile from '../../../UI/InfoTiles/InfoTile';
+import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt } from 'react-icons/fa';
 
 const infoTiles = [
     {
@@ -18,7 +18,7 @@ const infoTiles = [
         icon: <FaMapMarkerAlt />,
         info: 'Harrisburg, PA, USA',
     },
-]
+];
 
 function ContactSection() {
     return (
@@ -69,7 +69,7 @@ function ContactSection() {
                 </div>
             </div>
         </div>
-    )
+    );
 }
 
-export default ContactSection
+export default ContactSection;

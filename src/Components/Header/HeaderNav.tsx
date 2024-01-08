@@ -1,24 +1,24 @@
-import { useState } from 'react'
-import NoBorderBtn from '../../UI/Buttons/NoBorderBtn'
-import BorderBtn from '../../UI/Buttons/BorderBtn'
-import MobileFullBtn from '../../UI/Buttons/Mobile/MobileFullBtn'
-import MobileNoBorderBtn from '../../UI/Buttons/Mobile/MobileNoBorderBtn'
-import SiteLogo from '../../UI/Logos/SiteLogo'
+import { useState } from 'react';
+import NoBorderBtn from '../../UI/Buttons/NoBorderBtn';
+import BorderBtn from '../../UI/Buttons/BorderBtn';
+import MobileFullBtn from '../../UI/Buttons/Mobile/MobileFullBtn';
+import MobileNoBorderBtn from '../../UI/Buttons/Mobile/MobileNoBorderBtn';
+import SiteLogo from '../../UI/Logos/SiteLogo';
 
 function HeaderNav() {
-    const [showMenu, setShowMenu] = useState(false)
+    const [showMenu, setShowMenu] = useState(false);
 
     const toggleMenu = () => {
-        setShowMenu(!showMenu)
-    }
+        setShowMenu(!showMenu);
+    };
 
     const closeMenu = () => {
-        setShowMenu(false)
-    }
+        setShowMenu(false);
+    };
 
     window.addEventListener('resize', () => {
-        setShowMenu(false)
-    })
+        setShowMenu(false);
+    });
 
     return (
         <div className='fixed w-full drop-shadow-lg top-0 z-20'>
@@ -82,7 +82,7 @@ function HeaderNav() {
                 </div>
             </div>
         </div>
-    )
+    );
 }
 
-export default HeaderNav
+export default HeaderNav;

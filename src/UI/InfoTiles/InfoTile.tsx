@@ -1,7 +1,7 @@
 function InfoTile(props: {
-    info: string
-    icon: JSX.Element
-    className?: string
+    info: string;
+    icon: JSX.Element;
+    className?: string;
 }) {
     return (
         <div
@@ -13,7 +13,7 @@ function InfoTile(props: {
             <div>{props.icon}</div>
             <div>{props.info}</div>
         </div>
-    )
+    );
 }
 
-export default InfoTile
+export default InfoTile;

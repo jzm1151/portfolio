@@ -1,8 +1,8 @@
 function BorderBtn(props: {
-    link: string
-    text: string
-    onClick?: () => void
-    blankTarget?: boolean
+    link: string;
+    text: string;
+    onClick?: () => void;
+    blankTarget?: boolean;
 }) {
     return (
         <a
@@ -13,7 +13,7 @@ function BorderBtn(props: {
         >
             {props.text}
         </a>
-    )
+    );
 }
 
-export default BorderBtn
+export default BorderBtn;

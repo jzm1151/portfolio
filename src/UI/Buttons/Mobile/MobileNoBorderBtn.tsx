@@ -1,8 +1,8 @@
 function MobileNoBorderBtn(props: {
-    link: string
-    text: string
-    onClick?: () => void
-    blankTarget?: boolean
+    link: string;
+    text: string;
+    onClick?: () => void;
+    blankTarget?: boolean;
 }) {
     return (
         <a
@@ -13,7 +13,7 @@ function MobileNoBorderBtn(props: {
         >
             {props.text}
         </a>
-    )
+    );
 }
 
-export default MobileNoBorderBtn
+export default MobileNoBorderBtn;
