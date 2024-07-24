@@ -86,7 +86,7 @@ function ProjectsSection(props: ProjectsSectionProps) {
                                                 className={
                                                     'cube-face-image image-' +
                                                     (index + 1) +
-                                                    ' backdrop-blur-2xl h-full w-full'
+                                                    ' h-full w-full bg-gray-blue-950 opacity-95'
                                                 }
                                             ></div>
                                         );
