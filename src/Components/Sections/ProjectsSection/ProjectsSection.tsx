@@ -67,7 +67,7 @@ function ProjectsSection(props: ProjectsSectionProps) {
                     <div className='grid grid-cols-2 ml-5 mr-5 gap-4 md:gap-10 md:grid-cols-2 md:mx-auto md:w-11/12 lg:w-9/12 xl:w-8/12'>
                         <div className='col-span-2 font-bold text-3xl md:text-4xl lg:text-5xl'>
                             <div className='w-full flex justify-center -translate-y-20'>
-                                <h2>Projects</h2>
+                                <h2>Example Projects</h2>
                             </div>
                         </div>
                         <div className='col-span-2 md:col-span-1 mx-auto cube-container'>
