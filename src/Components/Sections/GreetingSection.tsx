@@ -5,26 +5,48 @@ const experience = [
     {
         company: 'WebFX',
         title: 'Software Engineer',
-        description: 'I am a full-stack software engineer at WebFX',
+        description: [
+            'Built dashboard with Laravel and Alpine.js to spin up and down the active sites on our staging server to improve security and reduce disk usage',
+            'Developed GitHub Actions scripts for general purpose use intended for a large client base',
+            'Helped with the migration of services from an internal automation server to GCP',
+        ],
         date: 'Feb 2024 - Present',
         linkedinUrl:
             'https://www.linkedin.com/in/jacob-moore-b10000000000000000000000/',
+        skills: [
+            'Node.js',
+            'MySQL',
+            'MongoDB',
+            'Elasticsearch',
+            'ReactJS',
+            'Pub/Sub',
+            'GCP',
+        ],
     },
     {
         company: 'WebFX',
         title: 'Web Developer',
-        description: 'I am a full-stack software engineer at WebFX',
+        description: [
+            'Built dashboard with Laravel and Alpine.js to spin up and down the active sites on our staging server to improve security and reduce disk usage',
+            'Developed GitHub Actions scripts for general purpose use intended for a large client base',
+            'Helped with the migration of services from an internal automation server to GCP',
+        ],
         date: 'Jul 2023 - Feb 2024',
         linkedinUrl:
             'https://www.linkedin.com/in/jacob-moore-b10000000000000000000000/',
+        skills: ['React', 'Node.js', 'Python', 'Docker', 'Kubernetes'],
     },
     {
         company: 'WebFX',
         title: 'Jr Web Developer',
-        description: 'I am a full-stack software engineer at WebFX',
+        description: [
+            'Worked on client projects including product comparison tools, ROI calculators, job boards, and more',
+            'Assisted with measurement and analytics using GA4 & A/B testing employing tools such as Omniconvert',
+        ],
         date: 'Jul 2022 - Jul 2023',
         linkedinUrl:
             'https://www.linkedin.com/in/jacob-moore-b10000000000000000000000/',
+        skills: ['React', 'Node.js', 'Python', 'Docker', 'Kubernetes'],
     },
 ];
 
@@ -93,9 +115,23 @@ function GreetingSection() {
                         <p className='text-xs text-gray-blue-600 mb-2'>
                             {exp.date}
                         </p>
-                        <p className='text-sm text-gray-blue-700 pr-6'>
-                            {exp.description}
+                        <p className='text-sm text-gray-blue-700 pr-6 mb-3'>
+                            <ul className='list-disc list-inside'>
+                                {exp.description.map((desc) => (
+                                    <li key={desc}>{desc}</li>
+                                ))}
+                            </ul>
                         </p>
+                        <div className='flex flex-wrap gap-1.5'>
+                            {exp.skills.map((skill) => (
+                                <span
+                                    key={skill}
+                                    className='inline-block bg-gray-blue-100 text-gray-blue-800 text-xs font-medium px-2.5 py-0.5 rounded-full'
+                                >
+                                    {skill}
+                                </span>
+                            ))}
+                        </div>
                     </a>
                 ))}
             </section>
