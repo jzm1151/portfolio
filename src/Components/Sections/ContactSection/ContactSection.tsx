@@ -50,14 +50,7 @@ function ContactSection() {
                         />
                     </div>
                 </div>
-                <div className='hidden md:inline-block col-span-2 md:col-span-1'>
-                    <img
-                        className='saturate-50 brightness-125'
-                        src='/contact-graphic.png'
-                        alt='Picture of a bird with a message bubble coming from the beak'
-                    />
-                </div>
-                <div className='col-span-2 grid grid-cols-3 gap-4'>
+                <div className='col-span-2 md:col-span-1 grid grid-cols-1 grid-rows-3 gap-4'>
                     {infoTiles.map((infoTile) => (
                         <InfoTile
                             key={infoTile.id}

@@ -27,7 +27,6 @@ function HeaderNav() {
                     <SiteLogo />
                 </div>
                 <div className='hidden md:block'>
-                    <NoBorderBtn link='#about' text='About' />
                     <NoBorderBtn link='#projects' text='Projects' />
                     <NoBorderBtn link='#contact' text='Contact' />
                     <BorderBtn
@@ -59,11 +58,6 @@ function HeaderNav() {
                 }`}
             >
                 <div className='bg-gray-blue-400 flex flex-col items-center justify-center h-screen w-full max-w-md relative'>
-                    <MobileNoBorderBtn
-                        onClick={closeMenu}
-                        link='#about'
-                        text='About'
-                    />
                     <MobileNoBorderBtn
                         onClick={closeMenu}
                         link='#projects'
